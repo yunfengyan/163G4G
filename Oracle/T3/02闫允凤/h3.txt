@@ -1,0 +1,50 @@
+SQL> create table empto as
+  2  select ename,sex,hire from ep;
+
+表已创建。
+
+
+SQL> create table emptwo as
+  2  select ename,sex,hire from ep where 1=2;
+
+表已创建。
+
+SQL> --修改列的类型
+SQL> alter table ep modify sex varchar2(2);
+
+表已更改。
+
+SQL> --删除一个字段
+SQL> alter table det drop column master;
+
+表已更改。
+
+SQL> --增加一个字段
+SQL> alter table det add master integer;
+
+表已更改。
+
+SQL> --增加约束
+SQL> alter table ep add constraint sexvalue check(sex in('m','f'));
+
+表已更改。
+
+SQL> --删除约束
+SQL> alter table ep drop constraint sexvalue;
+
+表已更改。
+
+SQL> --删除数据库
+SQL> drop table ep;
+
+表已删除。
+
+SQL> drop table det;
+
+表已删除。
+
+SQL> drop table hstoy;
+
+表已删除。
+
+SQL> spool off

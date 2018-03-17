@@ -1,0 +1,219 @@
+SQL> insert into det values(1,'董事会',5,'1111111',0);
+insert into det values(1,'董事会',5,'1111111',0)
+            *
+第 1 行出现错误: 
+ORA-00942: 表或视图不存在 
+
+
+SQL> insert into dept values(1,'董事会',5,'1111111',0);
+insert into dept values(1,'董事会',5,'1111111',0)
+            *
+第 1 行出现错误: 
+ORA-00913: 值过多 
+
+
+SQL> @f:\hello\h333.txt;
+SP2-0310: 无法打开文件 "f:\hello\h333.txt"
+SQL> @f:\hallo\h333.txt;
+
+表已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+SQL> insert into dept values(1,'董事会',5,'1111111',0);
+insert into dept values(1,'董事会',5,'1111111',0)
+            *
+第 1 行出现错误: 
+ORA-00913: 值过多 
+
+
+SQL> insert into dept values(1,'董事会',2,'1111111'0);
+insert into dept values(1,'董事会',2,'1111111'0)
+                                               *
+第 1 行出现错误: 
+ORA-00917: 缺失逗号 
+
+
+SQL> insert into dept values(1,'董事会',2,'1111111',0);
+insert into dept values(1,'董事会',2,'1111111',0)
+            *
+第 1 行出现错误: 
+ORA-00913: 值过多 
+
+
+SQL> insert into dept values(1,'董事会',2,'1111'，0);
+insert into dept values(1,'董事会',2,'1111'，0)
+            *
+第 1 行出现错误: 
+ORA-00913: 值过多 
+
+
+SQL> insert into det values(1,'董事会',2,'1111'，0);
+
+已创建 1 行。
+
+SQL> insert into det values(2,'市场部',2,'0111'，1);
+
+已创建 1 行。
+
+SQL> @f:\hallo\h334.txt;
+SP2-0310: 无法打开文件 "f:\hallo\h334.txt"
+SQL> @f:\hallo\h334.txt;
+SP2-0310: 无法打开文件 "f:\hallo\h334.txt"
+SQL> insert into det values(3,'销售部',2,'31111',5);
+
+已创建 1 行。
+
+SQL> insert into det values(4,'采购部',2,'317111',6);
+
+已创建 1 行。
+
+SQL> insert into ep values(8,'red','f',sysdate-380,50000.00,1);
+
+已创建 1 行。
+
+SQL> insert into ep values(9,'yello','f',sysdate-780,80000.00,2);
+
+已创建 1 行。
+
+SQL> insert into ep values(13,'luck,'m',to_date('2008-9-02','yyyy-mm-dd',45000.44,5);
+ERROR:
+ORA-01756: 引号内的字符串没有正确结束 
+
+
+SQL> insert into ep values(13,'luck,'m',to_date('2008-9-02','yyyy-mm-dd',
+  2  )45000.00,5);
+ERROR:
+ORA-01756: 引号内的字符串没有正确结束 
+
+
+SQL> insert into ep values(13,'luck','m',to_date('2008-9-02','yyyy-mm-dd'),
+  2  45000.00,5);
+
+已创建 1 行。
+
+SQL> insert into ep values(13,'luck','m','18-5 月-02',55000.0,3);
+insert into ep values(13,'luck','m','18-5 月-02',55000.0,3)
+                                    *
+第 1 行出现错误: 
+ORA-01843: 无效的月份 
+
+
+SQL> insert into ep values(13,'luck','m','12-5 月-08',55000.0,3);
+insert into ep values(13,'luck','m','12-5 月-08',55000.0,3)
+                                    *
+第 1 行出现错误: 
+ORA-01843: 无效的月份 
+
+
+SQL> insert into ep values(13,'luck','m','12-5 月-05',55000.0,3);
+insert into ep values(13,'luck','m','12-5 月-05',55000.0,3)
+                                    *
+第 1 行出现错误: 
+ORA-01843: 无效的月份 
+
+
+SQL> insert into ep values(3,'lck','m','12-5 月-05',55000.0,3);
+insert into ep values(3,'lck','m','12-5 月-05',55000.0,3)
+                                  *
+第 1 行出现错误: 
+ORA-01843: 无效的月份 
+
+
+SQL> insert into ep values(3,'lck','m','',55000.0,3);
+
+已创建 1 行。
+
+SQL> insert into empwo select*from ep;
+insert into empwo select*from ep
+            *
+第 1 行出现错误: 
+ORA-00942: 表或视图不存在 
+
+
+SQL> insert into empto select*from ep;
+insert into empto select*from ep
+            *
+第 1 行出现错误: 
+ORA-00913: 值过多 
+
+
+SQL> insert into emp(eid,enme)select eid,enmae from ep;
+insert into emp(eid,enme)select eid,enmae from ep
+                                    *
+第 1 行出现错误: 
+ORA-00904: "ENMAE": 标识符无效 
+
+
+SQL> insert into emp(eid,ename)select eid,enmae from ep;
+insert into emp(eid,ename)select eid,enmae from ep
+                                     *
+第 1 行出现错误: 
+ORA-00904: "ENMAE": 标识符无效 
+
+
+SQL> insert into emp(eid)select eid from ep;
+insert into emp(eid)select eid from ep
+                *
+第 1 行出现错误: 
+ORA-00904: "EID": 标识符无效 
+
+
+SQL> 
+SQL> insert into emp eid select eid from ep;
+insert into emp eid select eid from ep
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into emp eid select eid from ep;
+insert into emp eid select eid from ep
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> @f:hallo\h333.txt;
+create table det(
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+create table ep(
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+create table hstory(
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+ create table empto as
+              *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+create table empto as
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+SQL> insert into emp eid select eid from ep;
+insert into emp eid select eid from ep
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> spool cls
