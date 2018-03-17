@@ -1,0 +1,64 @@
+SQL> select name from v$database;
+
+NAME                                                                            
+------------------                                                              
+ORCL                                                                            
+
+SQL> show parametres db_name;
+SP2-0158: 未知的 SHOW 选项 "parametres"
+SP2-0158: 未知的 SHOW 选项 "db_name"
+SQL> help index
+
+Enter Help [topic] for help.
+
+ @             COPY         PAUSE                    SHUTDOWN
+ @@            DEFINE       PRINT                    SPOOL
+ /             DEL          PROMPT                   SQLPLUS
+ ACCEPT        DESCRIBE     QUIT                     START
+ APPEND        DISCONNECT   RECOVER                  STARTUP
+ ARCHIVE LOG   EDIT         REMARK                   STORE
+ ATTRIBUTE     EXECUTE      REPFOOTER                TIMING
+ BREAK         EXIT         REPHEADER                TTITLE
+ BTITLE        GET          RESERVED WORDS (SQL)     UNDEFINE
+ CHANGE        HELP         RESERVED WORDS (PL/SQL)  VARIABLE
+ CLEAR         HOST         RUN                      WHENEVER OSERROR
+ COLUMN        INPUT        SAVE                     WHENEVER SQLERROR
+ COMPUTE       LIST         SET                      XQUERY
+ CONNECT       PASSWORD     SHOW
+
+
+SQL> @f:\hallo\h333.txt;
+
+表已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+create table empto as
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+SQL> select * from dept;
+select * from dept
+              *
+第 1 行出现错误: 
+ORA-00942: 表或视图不存在 
+
+
+SQL> select * from det;
+
+未选定行
+
+SQL> set time on;
+09:42:27 SQL> set pagesize 2;
+09:49:58 SQL> 
+09:50:11 SQL> set echo on;
+09:50:53 SQL> spool off;
