@@ -1,0 +1,151 @@
+SQL> @ f:\hallo\h333.txt
+create table det(
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+create table ep(
+             *
+第 1 行出现错误: 
+ORA-00955: 名称已由现有对象使用 
+
+
+
+表已创建。
+
+
+表已创建。
+
+  6  
+SQL> select ceil(3.14)from dual;
+
+CEIL(3.14)                                                                      
+----------                                                                      
+         4                                                                      
+
+SQL> select round(3.1415926,4)from dual;
+
+ROUND(3.1415926,4)                                                              
+------------------                                                              
+            3.1416                                                              
+
+SQL> select mod(13,6)from dual;
+
+ MOD(13,6)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select power(13,6)from dual;
+
+POWER(13,6)                                                                     
+-----------                                                                     
+    4826809                                                                     
+
+SQL> select length('hello')from dual;
+
+LENGTH('HELLO')                                                                 
+---------------                                                                 
+              5                                                                 
+
+SQL> select lnitcap('hello')from dual;
+select lnitcap('hello')from dual
+       *
+第 1 行出现错误: 
+ORA-00904: "LNITCAP": 标识符无效 
+
+
+SQL> select concat('hello','sex')from dual;
+
+CONCAT('HELLO','                                                                
+----------------                                                                
+hellosex                                                                        
+
+SQL> sysdate;
+SP2-0042: 未知命令 "sysdate" - 其余行忽略。
+SQL> select  sysdate from dual ;
+
+SYSDATE                                                                         
+--------------                                                                  
+17-3月 -18                                                                      
+
+SQL> select months_between(sysdate,'sysdate-300')from dual;
+select months_between(sysdate,'sysdate-300')from dual
+                              *
+第 1 行出现错误: 
+ORA-01858: 在要求输入数字处找到非数字字符 
+
+
+SQL> select months_between(sysdate,to_date(2100-12-12,'yyyy-mm-dd'))from dual;
+select months_between(sysdate,to_date(2100-12-12,'yyyy-mm-dd'))from dual
+                                             *
+第 1 行出现错误: 
+ORA-01840: 输入值对于日期格式不够长 
+
+
+SQL> select months_between(sysdate,to_date(2100-2-12,'yyyy-mm-dd'))from dual;
+select months_between(sysdate,to_date(2100-2-12,'yyyy-mm-dd'))from dual
+                                            *
+第 1 行出现错误: 
+ORA-01840: 输入值对于日期格式不够长 
+
+
+SQL> select months_between(sysdate,to_date('2100-2-12','yyyy-mm-dd'))from dual;
+
+MONTHS_BETWEEN(SYSDATE,TO_DATE('2100-2-12','YYYY-MM-DD'))                       
+---------------------------------------------------------                       
+                                               -982.82468                       
+
+SQL> select add_months(stydate,5)from dual;
+select add_months(stydate,5)from dual
+                  *
+第 1 行出现错误: 
+ORA-00904: "STYDATE": 标识符无效 
+
+
+SQL> select add_months(sysdate,5)from dual;
+
+ADD_MONTHS(SYS                                                                  
+--------------                                                                  
+17-8月 -18                                                                      
+
+SQL> select net_day(sysdate,5)from dual;
+select net_day(sysdate,5)from dual
+       *
+第 1 行出现错误: 
+ORA-00904: "NET_DAY": 标识符无效 
+
+
+SQL> select next_day(sysdate,5)from dual;
+
+NEXT_DAY(SYSDA                                                                  
+--------------                                                                  
+22-3月 -18                                                                      
+
+SQL> select last_day(sysdate,5)from dual;
+select last_day(sysdate,5)from dual
+       *
+第 1 行出现错误: 
+ORA-00909: 参数个数无效 
+
+
+SQL> select last_day(sysdate)from dual;
+
+LAST_DAY(SYSDA                                                                  
+--------------                                                                  
+31-3月 -18                                                                      
+
+SQL> select to_char(sysdate,'yyyy-mm-dd dy am hh:mi:ss')from dual
+  2  ;
+
+TO_CHAR(SYSDATE,'YYYY-MM-DDDYAMHH:MI:SS')                                       
+------------------------------------------------------------------------------  
+2018-03-17 星期六 上午 10:31:26                                                 
+
+SQL> select to_number('2345,2345','9999,9999')from dual;
+
+TO_NUMBER('2345,2345','9999,9999')                                              
+----------------------------------                                              
+                          23452345                                              
+
+SQL> spool off
